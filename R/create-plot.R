@@ -15,7 +15,7 @@ scatter_plot =
 df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am), ) + 
-  geom_point(color="red") + 
+  geom_point(color="purple") + 
   ggtitle(paste0("Humidity vs. Temperature in ",city)) + 
   theme_minimal() +
   facet_wrap(~WindDir9am)
