@@ -15,7 +15,7 @@ scatter_plot =
 df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am), ) + 
-  geom_point(color="purple") + 
+  geom_point(color="green") + 
   ggtitle(paste0("Humidity vs. Temperature in ",city)) + 
   theme_minimal() +
   facet_wrap(~WindDir9am)
@@ -29,4 +29,4 @@ time_series =
   ggplot(aes(x = Date, y = Temp9am)) +
   geom_line()
 ggsave(filename = "graphics/timeseries-rainfall.png",
-       plot = scatter_plot)
+       plot = time_series)
